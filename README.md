@@ -1,6 +1,8 @@
 环境准备: python3.8,pipenv,docker,docker-compose
 
-编辑器 vscode或者pycharm,vscode可以安装rest client插件
+编辑器: vscode或者pycharm,vscode可以安装rest client插件
+
+技术栈: flask,uwsgi/gunicorn,nginx,docker
 
 第一个项目为最简单的单文件api项目
 
