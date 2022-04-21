@@ -19,4 +19,3 @@ services:
       - test
 networks: 
   test:
-    external: true
