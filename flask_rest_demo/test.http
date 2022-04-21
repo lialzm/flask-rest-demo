@@ -1,0 +1,33 @@
+GET http://127.0.0.1:5000/home/2 HTTP/1.1
+Content-Type: application/json
+
+###
+
+POST http://127.0.0.1:5000/ HTTP/1.1
+Content-Type: application/json
+
+{
+   "data":"test"
+}
+
+###
+
+GET http://127.0.0.1:5000/ HTTP/1.1
+Content-Type: application/json
+
+###
+
+PUT http://127.0.0.1:5000/ HTTP/1.1
+Content-Type: application/json
+
+{
+   "data":"test1"
+}
+
+
+###
+
+DELETE  http://127.0.0.1:5000/ HTTP/1.1
+Content-Type: application/json
+
+{}

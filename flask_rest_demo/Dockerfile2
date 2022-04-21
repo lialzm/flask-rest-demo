@@ -1,0 +1,9 @@
+FROM python:3.8-slim
+WORKDIR /code
+COPY . /code
+RUN sed -i s@archive.debian.com@mirrors.aliyun.com@g /etc/apt/sources.list && \
+  sed -i s@security.debian.org@mirrors.aliyun.com@g /etc/apt/sources.list && \
+  sed -i s@deb.debian.org@mirrors.aliyun.com@g /etc/apt/sources.list
+RUN apt update && apt install -y gcc &&  pip install -r ./requirements.txt -i https://pypi.doubanio.com/simple && /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo 'Asia/Shanghai' >/etc/timezone && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime  && rm -rf /var/lib/apt/lists/*
+EXPOSE 5000
+CMD  uwsgi --ini uwsgi.ini  
