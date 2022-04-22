@@ -12,7 +12,7 @@
 
 ```
 //安装依赖
-pipenv insstall
+pipenv install
 
 //启动项目
 python run.py 
@@ -22,7 +22,9 @@ python run.py
 
 可以使用docker-compose直接启动项目
 
+```
 docker-compose up 
+```
 
 ## 测试接口
 
